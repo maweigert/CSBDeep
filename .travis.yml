@@ -20,8 +20,8 @@ matrix:
       env: TENSORFLOW='tensorflow<1.11'   KERAS='keras==2.2.4'
 
 install:
+  - pip install -vv imagecodecs
   - pip install $TENSORFLOW $KERAS
-  - pip install imagecodecs 
   - pip install -vv .;
 
 script:
