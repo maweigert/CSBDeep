@@ -20,7 +20,8 @@ matrix:
       env: TENSORFLOW='tensorflow<1.12'   KERAS='keras==2.2.4'
 
 install:
-  - pip install numpy>=1.16
+  - pip uninstall numpy -y
+  - pip install -I numpy>=1.16
   - pip install $TENSORFLOW $KERAS
   - pip install -vv .;
 
