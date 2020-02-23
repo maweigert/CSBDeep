@@ -13,14 +13,15 @@ env:
 matrix:
   include:
     - os: linux
+      python: 3.5
+    - os: linux
       python: 3.6
       if: branch = master
       env: TENSORFLOW='tensorflow<1.11'   KERAS='keras==2.2.4'
 
 install:
-  - pip install -vv imagecodecs
+  - pip install imagecodecs==2019.12.16
   - pip install $TENSORFLOW $KERAS
-  - pip install numpy>=1.16 .;
   - pip install -vv .;
 
 script:
