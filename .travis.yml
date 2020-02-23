@@ -21,13 +21,7 @@ matrix:
 
 install:
   - pip install $TENSORFLOW $KERAS
-  - if [ -z $ONLY_INSTALL ]; then
-       pip install .;
-    else
-       pip install csbdeep;
-    fi
+  - pip install .;
 
 script:
-  - if [ -z $ONLY_INSTALL ]; then
-      pytest -v --durations=50;
-    fi
+  - pytest -v --durations=50;
